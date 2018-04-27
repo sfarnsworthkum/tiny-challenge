@@ -1,0 +1,52 @@
+<!-- Library / File name: Salutation.js
+Public Methods:
+● fullName()
+  ■ should return “firstName lastName”
+  ■ for example: Peter Forsberg
+● greeting()
+  ■ should return “Greetings and Salutations firstName lastName”
+  ■ for example: Greetings and Salutations Peter Forsberg
+Private data: (should not​ be directly accessible from outside the Salutation.js​ code)
+  ● firstName
+  ● lastName
+Initializer (how would one use your library from their own JavaScript file):
+  ● var mySalutation = Salutation('Peter', 'Forsberg');
+  ● mySalutation.greeting()
+  ● mySalutation.fullName()
+Application pattern:
+  ● Create a simple index.html page
+  ● Create your own JavaScript file (myapp.js​)
+  ● Include Salutation.js​ in your HTML page
+  ● Include myapp.js​ in your HTML page
+  ● Add a <div> to your index.html page with an ID of salutation
+  ● Add a <div> to your index.html page with an ID of fullname
+  ● Add a button to your index.html​ page that triggers JavaScript in myapp.js​ to call
+    your Salutation.js​ library to insert a salutation for a person named “Peter
+    Forsberg” into the <div> with an ID of salutation​.
+    ○ The call to Salutation should look like this:
+    var mySalutation = Salutation('Peter', 'Forsberg');
+    ○ You can use jQuery for the DOM manipulation if that is your preference
+  ● Add a button to your index.html​ page that triggers JavaScript in myapp.js​ to call
+  your Salutation.js​ library to insert the full name for a person named “Joe Sakic”
+  into the <div> with an ID of fullname​.
+    ○ The call to Salutation should look like this:
+      var mySalutation = Salutation('Joe, 'Sakic);
+    ○ You can use jQuery for the DOM manipulation if that is your preference -->
+
+  <head>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script src="Salutation.js"></script>
+    <script src="myapp.js"></script>
+  </head>
+  <body>
+    <div id="salutation">
+    </div>
+    <div id="fullname">
+
+    </div>
+    <button onclick="salute()">Salute</button>
+    <button onclick="insertName()">Insert Name</button>
+  </body>
